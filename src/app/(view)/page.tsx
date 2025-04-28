@@ -194,7 +194,7 @@ export default function Home() {
         </div>
         <div className="!my-12">
           <Card className="">
-            <CardContent className="flex justify-strech">
+            <CardContent className="flex flex-col md:flex-row justify-strech">
               <div className="!h-full flex-1 !p-6 !space-y-6">
                 <h2 className="text-3xl">
                   Refer a friend and earn 2 free cleanings
@@ -218,7 +218,7 @@ export default function Home() {
           </Card>
         </div>
         <h3 className="text-4xl font-semibold text-center">About Us</h3>
-        <div className="!my-12 grid grid-cols-2 gap-[100px] w-full">
+        <div className="!my-12 grid md:grid-cols-2 md:gap-[100px] w-full">
           <div className="!space-y-6">
             <p className="text-xl font-semibold">- At Clearpath, </p>
             <p className="text-lg font-semibold">
@@ -239,21 +239,21 @@ export default function Home() {
               Get a Quote <ArrowUpRight className="!ml-2" />
             </button>
           </div>
-          <div className="grid grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6 md:h-full !mt-12 md:!mt-auto">
             <div
-              className="bg-cover bg-center col-span-4 rounded-2xl "
+              className="bg-cover bg-center col-span-1 md:col-span-4 rounded-2xl aspect-[4/3]"
               style={{ backgroundImage: `url('/image/ab1.jpg')` }}
             />
             <div
-              className="bg-cover bg-center col-span-2 rounded-2xl"
+              className="bg-cover bg-center col-span-1 md:col-span-2 rounded-2xl"
               style={{ backgroundImage: `url('/image/ab2.jpg')` }}
             />
             <div
-              className="bg-cover bg-center col-span-3 rounded-2xl"
+              className="bg-cover bg-center col-span-1 md:col-span-3 rounded-2xl aspect-[4/3]"
               style={{ backgroundImage: `url('/image/ab3.jpg')` }}
             />
             <div
-              className="bg-cover bg-center col-span-3 rounded-2xl"
+              className="bg-cover bg-center col-span-1 md:col-span-3 rounded-2xl aspect-[4/3]"
               style={{ backgroundImage: `url('/image/ab4.jpg')` }}
             />
           </div>
@@ -499,22 +499,22 @@ export default function Home() {
             <CardTitle className="text-center text-3xl">
               Get in Touch with us
             </CardTitle>
-            <CardContent className="grid grid-cols-2 !px-12">
+            <CardContent className="grid md:grid-cols-2 md:!px-12">
               <div className="">
-                <h4 className="text-3xl">
+                <h4 className="text-lg font-semibold md:text-3xl">
                   Lets Talk About Your Next Pet Disposal
                 </h4>
                 <p className="text-lg">
                   Have questions? Ready to schedule a cleanup? We’re here to
                   help! Reach out to us anytime — we’d love to hear from you.
                 </p>
-                <div className="!my-8 !space-y-3 !px-4">
+                <div className="!my-8 !space-y-3 md:!px-4">
                   {[
                     { icon: <PhoneIcon />, label: "+1256987456" },
                     { icon: <MailIcon />, label: "example@gmail.com" },
                     { icon: <MapPinIcon />, label: "Dhaka, Bangladesh" },
                   ].map((x, i) => (
-                    <div key={i} className="flex gap-4 text-xl">
+                    <div key={i} className="flex gap-4 text-base md:text-xl">
                       {x.icon} {x.label}
                     </div>
                   ))}
@@ -522,20 +522,20 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between h-[400px]">
                 <input
-                  className="!px-4 !py-3 rounded-xl bg-background"
+                  className="!px-4 !py-3 rounded-xl bg-background placeholder:text-foreground"
                   placeholder="Full name"
                 />
                 <input
-                  className="!px-4 !py-3 rounded-xl bg-background"
+                  className="!px-4 !py-3 rounded-xl bg-background placeholder:text-foreground"
                   placeholder="Email"
                 />
                 <textarea
-                  className="!px-4 !py-3 rounded-xl bg-background"
+                  className="!px-4 !py-3 rounded-xl bg-background placeholder:text-foreground"
                   rows={6}
-                  placeholder="Email"
+                  placeholder="Your Enquiry"
                 />
-                <button className="flex !px-8 rounded-full !py-3 bg-background w-min">
-                  Send <SendHorizonalIcon className="!ml-2" />
+                <button className="flex !px-8 rounded-full !py-3 bg-background w-min items-center hover:bg-zinc-100">
+                  Send <SendHorizonalIcon className="!ml-2 size-5" />
                 </button>
               </div>
             </CardContent>
